@@ -25,6 +25,9 @@
 ## Ejecutar en desarrollo
 
 1. Clonar el repositorio
+```
+git clone ...
+```
 
 2. Ejecutar
 
@@ -44,6 +47,11 @@ docker-compose up -d
 
 5. Cargar semilla
 // TODO
+
+## Ejecutar en producción
+
+1. Correr comando de produccón
+
 
 ## Stack de tecnologias
 
