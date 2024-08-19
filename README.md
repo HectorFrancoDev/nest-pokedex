@@ -25,6 +25,7 @@
 ## Ejecutar en desarrollo
 
 1. Clonar el repositorio
+
 ```
 git clone ...
 ```
@@ -36,22 +37,26 @@ yarn install
 ```
 
 3. Tener Nest CLI instalado
+
 ```bash
 npm i -g @nestjs/cli
 ```
 
 4. Levantar la Base de Datos
+
 ```bash
 docker-compose up -d
 ```
 
 5. Cargar semilla
-// TODO
+
+```
+http://127.0.0.1:3000/api/v2/seed
+```
 
 ## Ejecutar en producción
 
 1. Correr comando de produccón
-
 
 ## Stack de tecnologias
 
