@@ -66,7 +66,14 @@ http://127.0.0.1:3000/api/v2/seed
 
 ## Ejecutar en producción
 
-1. Correr comando de produccón
+1. Crear el archivo ``.env.prod``
+2. Llenar las variables de entorno de prod
+3. Crear la nueva imagen 
+```docker
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+
+
 
 ## Stack de tecnologias
 
