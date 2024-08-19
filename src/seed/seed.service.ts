@@ -8,6 +8,8 @@ import { AxiosAdapter } from 'src/common/adapters/axios.adapter';
 
 @Injectable()
 export class SeedService {
+  private readonly ENDPOINT = 'https://pokeapi.co/api/v2/pokemon?limit=650';
+
   constructor(
     @InjectModel(Pokemon.name)
     private readonly pokemonModel: Model<Pokemon>,
@@ -23,9 +25,7 @@ export class SeedService {
     await this.pokemonModel.deleteMany({});
 
     // Fetch data from Endpoint
-    const data: PokeResponse = await this.http.get<PokeResponse>(
-      'https://pokeapi.co/api/v2/pokemon?limit=650',
-    );
+    const data: PokeResponse = await this.http.get<PokeResponse>(this.ENDPOINT);
 
     const pokemonToInsert: { name: string; no: number }[] = [];
 
@@ -37,6 +37,6 @@ export class SeedService {
     // INSERT INTO POKEMONS NAME, NO
     await this.pokemonModel.insertMany(pokemonToInsert);
 
-    return 'Seed excuted';
+    return { message: 'Seed excuted' };
   }
 }

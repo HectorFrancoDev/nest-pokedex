@@ -30,17 +30,15 @@
 git clone ...
 ```
 
-2. Ejecutar
-
-```bash
-yarn install
-```
-
-3. Tener Nest CLI instalado
+2. Tener Nest CLI instalado
 
 ```bash
 npm i -g @nestjs/cli
 ```
+
+3. Clonar el archivo **.env.template** y renombras a **.env**
+
+4. Llenar las variables de entorno de **.env**
 
 4. Levantar la Base de Datos
 
@@ -48,7 +46,19 @@ npm i -g @nestjs/cli
 docker-compose up -d
 ```
 
-5. Cargar semilla
+5. Instalar dependencias
+
+```bash
+yarn install
+```
+
+6. Correr aplicación
+
+```
+yarn start:dev
+```
+
+7. Cargar semilla
 
 ```
 http://127.0.0.1:3000/api/v2/seed
